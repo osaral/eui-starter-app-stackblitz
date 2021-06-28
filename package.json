@@ -1,0 +1,61 @@
+{
+    "name": "eui-angular-app",
+    "version": "10.4.1",
+    "license": "EUPL-1.1",
+    "scripts": {
+        "ng": "ng",
+        "e2e": "ng e2e",
+        "postinstall": "tslint --project ./src/tsconfig.app.json --fix",
+        "start-mock-server": "nodemon --watch ./mock ./mock/server.js",
+        "start-serve": "eui-scripts serve-app --configuration=proxy-mock",
+        "start": "npm-run-all --parallel start-mock-server start-serve",
+        "start-mean": "npm-run-all --parallel start-mock-server-mean start-serve",
+        "start-proxy": "eui-scripts serve-app --configuration=proxy",
+        "start-openid": "eui-scripts serve-app --configuration=local-openid",
+        "build": "eui-scripts build-app",
+        "build-dev": "eui-scripts build-app --configuration=dev",
+        "build-prod": "eui-scripts build-app --configuration=production",
+        "build-prod-skip-test": "eui-scripts build-app --configuration=production --extraWebpackConfig --skipTest",
+        "build-prod-ci": "ncp tsconfig-ci.json tsconfig.json && npm run build-prod",
+        "build-prod-stats": "eui-scripts build-app --configuration=production --extraWebpackConfig --statsJson",
+        "pkg:init": "eui-cli -m",
+        "pkg:clean": "eui-scripts clean-package",
+        "pkg:clean-all": "eui-scripts clean-all",
+        "pkg:test": "eui-scripts test-package",
+        "pkg:build": "eui-scripts build-package",
+        "pkg:build-deps": "eui-scripts build-deps",
+        "pkg:build-all": "eui-scripts build-all",
+        "pkg:build-element": "eui-scripts build-element",
+        "build-prod:all": "npm run pkg:build-all && npm run build",
+        "pkg:publish": "eui-scripts publish",
+        "pkg:publish-all": "eui-scripts publish-all",
+        "generate-changelog": "eui-scripts generate-changelog"
+    },
+    "private": true,
+    "dependencies": {
+        "@eui/deps-base": "10.4.1"
+    },
+    "browserslist": [
+        "last 2 chrome versions",
+        "last 2 firefox versions",
+        "last 1 edge version",
+        "Firefox ESR"
+    ],
+    "resolutions": {
+        "lodash": ">=4.17.21",
+        "handlebars": ">=4.5.3",
+        "mem": ">=4.3.0",
+        "https-proxy-agent": ">=2.2.3",
+        "minimatch": ">=3.0.4",
+        "acorn-globals": ">=6.0.0",
+        "open": "7.0.3",
+        "caniuse-lite": "1.0.30001055",
+        "dot-prop": ">=5.2.0",
+        "serialize-javascript": ">=3.1.0",
+        "socket.io": "2.4.0",
+        "ssri": "8.0.1",
+        "@types/node": "14.14.10",
+        "hosted-git-info": ">=3.0.8",
+        "yui": ">=2.9.1"
+    }
+}

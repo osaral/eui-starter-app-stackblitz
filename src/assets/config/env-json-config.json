@@ -1,0 +1,8 @@
+{
+    "modules": {
+        "core": {
+            "base": "/api",
+            "userDetails": "/user-details"
+        }
+    }
+}
