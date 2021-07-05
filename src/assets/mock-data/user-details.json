@@ -1,0 +1,8 @@
+{
+  "id": 0,
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@something.com",
+  "isAdmin": false,
+  "birthdate": null
+}

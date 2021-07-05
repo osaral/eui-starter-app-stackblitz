@@ -1,7 +1,7 @@
 {
     "modules": {
         "core": {
-            "base": "/api",
+            "base": "/assets/mock-data/",
             "userDetails": "/user-details"
         }
     }
