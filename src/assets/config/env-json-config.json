@@ -2,7 +2,7 @@
     "modules": {
         "core": {
             "base": "/assets/mock-data/",
-            "userDetails": "/user-details"
+            "userDetails": "user-details.json"
         }
     }
 }
